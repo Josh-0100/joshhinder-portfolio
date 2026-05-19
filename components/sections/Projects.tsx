@@ -8,6 +8,7 @@ const projects = [
       'A verified social platform for university societies at the University of Liverpool. Replacing fragmented WhatsApp groups and Facebook pages with a purpose-built app — event management, society dashboards, real-time messaging, and a pub crawl feature.',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'Node.js', 'PostgreSQL', 'Express'],
     href: '/projects/geniva',
+    externalHref: null,
     featured: true,
   },
   {

@@ -1,15 +1,10 @@
 import FadeIn from '@/components/ui/FadeIn'
 
-const skills = [
-  { name: 'TypeScript', symbol: 'TS' },
-  { name: 'React', symbol: 'Re' },
-  { name: 'Next.js', symbol: '▲' },
-  { name: 'Node.js', symbol: 'No' },
-  { name: 'Supabase', symbol: 'Sb' },
-  { name: 'PostgreSQL', symbol: 'Pg' },
-  { name: 'Express', symbol: 'Ex' },
-  { name: 'Claude API', symbol: 'AI' },
-  { name: 'Git', symbol: 'Gt' },
+const skillCategories = [
+  { label: 'Languages',  items: ['TypeScript', 'JavaScript', 'Java', 'HTML/CSS', 'Haskell'] },
+  { label: 'Frameworks', items: ['React', 'Next.js', 'Node.js', 'Express', 'Tailwind CSS'] },
+  { label: 'Tools',      items: ['Git', 'Supabase', 'PostgreSQL', 'Vercel', 'VS Code'] },
+  { label: 'Product',    items: ['Claude API', 'Figma', 'Agile/Scrum'] },
 ]
 
 export default function Skills() {
@@ -23,14 +18,23 @@ export default function Skills() {
           <h2 className="text-4xl font-bold tracking-tight mb-16">What I work with.</h2>
         </FadeIn>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
-          {skills.map((skill, i) => (
-            <FadeIn key={skill.name} delay={i * 0.05}>
-              <div className="flex flex-col items-center gap-3 p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 hover:border-cyan-500 dark:hover:border-cyan-400 transition-colors group">
-                <span className="text-xl font-bold font-mono text-neutral-400 dark:text-neutral-500 group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors">
-                  {skill.symbol}
+        <div className="space-y-6 max-w-3xl">
+          {skillCategories.map((cat, i) => (
+            <FadeIn key={cat.label} delay={i * 0.08}>
+              <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+                <span className="text-sm font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-widest w-32 shrink-0 pt-1.5">
+                  {cat.label}
                 </span>
-                <span className="text-xs font-medium text-center leading-tight">{skill.name}</span>
+                <div className="flex flex-wrap gap-2">
+                  {cat.items.map((item) => (
+                    <span
+                      key={item}
+                      className="px-4 py-1.5 text-sm font-medium bg-neutral-100 dark:bg-neutral-800 rounded-full hover:bg-cyan-500/10 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </FadeIn>
           ))}

@@ -2,18 +2,18 @@ import FadeIn from '@/components/ui/FadeIn'
 
 const experiences = [
   {
-    role: 'Sales Assistant',
-    company: 'Music Store',
-    period: '2023 – 2024',
-    description:
-      'Assisted customers in selecting instruments and music equipment, providing product knowledge and personalised advice in a specialist retail environment.',
-  },
-  {
     role: 'Team Member',
     company: "Nando's",
-    period: '2022 – 2023',
+    period: '2025 – Present',
     description:
       "Front-of-house service in a high-volume restaurant, developing strong customer service, communication, and teamwork skills under pressure.",
+  },
+  {
+    role: 'Sales Assistant',
+    company: 'Music Store',
+    period: '2023 – 2025',
+    description:
+      'Assisted customers in selecting instruments and music equipment, providing product knowledge and personalised advice in a specialist retail environment.',
   },
 ]
 
