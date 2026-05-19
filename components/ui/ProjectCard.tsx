@@ -36,6 +36,6 @@ export default function ProjectCard({ title, description, tags, href }: ProjectC
     </div>
   )
 
-  if (href) return <Link href={href}>{inner}</Link>
+  if (href) return <Link href={href} className="block h-full">{inner}</Link>
   return <>{inner}</>
 }
