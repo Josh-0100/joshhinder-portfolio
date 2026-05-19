@@ -1,0 +1,50 @@
+export const metadata = {
+  title: 'Geniva — Joshua Hinder',
+  description: 'How I built a verified social platform for university societies.',
+}
+
+# Geniva
+
+A verified social platform for university societies at the University of Liverpool —
+replacing fragmented WhatsApp groups, Facebook pages, and email chains with a single
+purpose-built app.
+
+## The Problem
+
+University societies at UoL communicated across a dozen different channels. New members
+missed events. Committee handovers lost institutional knowledge. There was no single place
+to discover what was happening on campus.
+
+## What I Built
+
+Geniva gives every society a verified home: group messaging, event lifecycle management
+(including a live pub crawl feature with real-time check-ins), committee dashboards with
+analytics, and an admin layer for university oversight.
+
+## Tech Stack
+
+- **Frontend:** Next.js 15 (App Router), TypeScript, Tailwind CSS
+- **Backend:** Node.js + Express API, Supabase (PostgreSQL + Realtime + Auth)
+- **Infrastructure:** Vercel, web-push notifications (VAPID keys)
+- **Real-time:** Supabase Realtime channels for live pub crawl updates
+
+## What I Learned
+
+- Designing for multiple user roles (student, committee member, admin) in a single app
+  requires clear permission boundaries from day one
+- Real-time features (Supabase Realtime) are powerful but need careful channel management
+  to avoid stale subscriptions
+- Push notifications on the web require VAPID keys and careful error handling — always
+  wrap in try/catch, the subscription can go stale
+- End-to-end encryption for messages adds meaningful complexity; plan the key exchange
+  model before writing the first line
+
+## Status
+
+Currently in active development with a Freshers Fair launch target. All major pages
+(societies, events, messages, profiles, admin dashboard, committee tools) are wired to
+real APIs.
+
+---
+
+*Last updated: May 2026*
