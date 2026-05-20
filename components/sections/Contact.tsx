@@ -37,7 +37,7 @@ export default function Contact() {
         <div className="border-t border-neutral-200 dark:border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-start gap-6 text-sm text-neutral-400 dark:text-neutral-500">
           <p>© 2026 Joshua Hinder. All rights reserved.</p>
           <address className="not-italic text-right">
-            Joshua Hinder Ltd
+            Joshua Hinder
             <br />
             124 City Road
             <br />
